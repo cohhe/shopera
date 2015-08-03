@@ -374,8 +374,13 @@ if ( class_exists( 'WP_Customize_Section' ) && !class_exists( 'Shopera_Customize
 					#customize-theme-controls>ul>#accordion-section-shopera_social_links {
 						margin-top: 40px;
 					}
+					.cohhe-social-profiles li.documentation {
+						text-align: center;
+						margin-bottom: 15px;
+					}
 				</style>
 				<ul class="cohhe-social-profiles">
+					<li class="documentation"><a href="http://documentation.cohhe.com/shopera" class="button button-primary button-hero" target="_blank"><?php _e( 'Documentation', 'shopera' ); ?></a></li>
 					<li class="social-twitter"><i class="twitter"></i><a href="https://twitter.com/Cohhe_Themes" target="_blank"><?php _e( 'Follow us on Twitter', 'shopera' ); ?></a></li>
 					<li class="social-facebook"><i class="facebook"></i><a href="https://www.facebook.com/cohhethemes" target="_blank"><?php _e( 'Join us on Facebook', 'shopera' ); ?></a></li>
 					<li class="social-googleplus"><i class="googleplus"></i><a href="https://plus.google.com/+Cohhe_Themes/posts" target="_blank"><?php _e( 'Join us on Google+', 'shopera' ); ?></a></li>

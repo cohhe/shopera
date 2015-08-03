@@ -1,0 +1,747 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Shopera v1.0.12\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2015-06-16 08:49:08+0000\n"
+"Last-Translator: smaids <smaids2007@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: 404.php:17
+#@ shopera
+msgid "404"
+msgstr ""
+
+#: 404.php:21
+#@ shopera
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: archive.php:37
+#, php-format
+#@ shopera
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: archive.php:40
+#, php-format
+#@ shopera
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: archive.php:40
+#@ shopera
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: archive.php:43
+#, php-format
+#@ shopera
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: archive.php:43
+#@ shopera
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: archive.php:46
+#: taxonomy-post_format.php:54
+#@ shopera
+msgid "Archives"
+msgstr ""
+
+#: author.php:38
+#, php-format
+#@ shopera
+msgid "All posts by %s"
+msgstr ""
+
+#: category.php:22
+#, php-format
+#@ shopera
+msgid "Category Archives: %s"
+msgstr ""
+
+#: comments.php:27
+#, php-format
+#@ shopera
+msgid "1 Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:34
+#: comments.php:53
+#@ shopera
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:35
+#: comments.php:54
+#@ shopera
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:36
+#: comments.php:55
+#@ shopera
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:60
+#@ shopera
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:70
+#@ shopera
+msgid "Leave a reply"
+msgstr ""
+
+#: comments.php:72
+#@ shopera
+msgid "Post comment"
+msgstr ""
+
+#: comments.php:73
+#@ shopera
+msgid "Message"
+msgstr ""
+
+#: content-aside.php:42
+#: content-aside.php:48
+#: content-audio.php:42
+#: content-audio.php:48
+#: content-gallery.php:42
+#: content-gallery.php:48
+#: content-image.php:42
+#: content-image.php:48
+#: content-link.php:42
+#: content-link.php:48
+#: content-quote.php:42
+#: content-quote.php:48
+#: content-video.php:42
+#: content-video.php:48
+#: content.php:47
+#: content.php:53
+#@ shopera
+msgid "by"
+msgstr ""
+
+#: content-aside.php:51
+#: content-aside.php:60
+#: content-audio.php:51
+#: content-audio.php:60
+#: content-gallery.php:51
+#: content-gallery.php:60
+#: content-image.php:51
+#: content-image.php:60
+#: content-link.php:51
+#: content-link.php:60
+#: content-quote.php:51
+#: content-quote.php:60
+#: content-video.php:51
+#: content-video.php:60
+#: content.php:56
+#: content.php:65
+#@ shopera
+msgid ", "
+msgstr ""
+
+#: content-aside.php:71
+#: content-audio.php:71
+#: content-gallery.php:71
+#: content-image.php:71
+#: content-link.php:71
+#: content-quote.php:71
+#: content-video.php:71
+#: content.php:76
+#@ shopera
+msgid "Comments"
+msgstr ""
+
+#: content-aside.php:92
+#: content-audio.php:92
+#: content-gallery.php:92
+#: content-image.php:92
+#: content-link.php:92
+#: content-quote.php:92
+#: content-video.php:92
+#: content.php:103
+#: content.php:105
+#@ shopera
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: content-aside.php:94
+#: content-audio.php:94
+#: content-gallery.php:94
+#: content-image.php:94
+#: content-link.php:94
+#: content-page.php:26
+#: content-quote.php:94
+#: content-video.php:94
+#: content.php:124
+#: image.php:54
+#@ shopera
+msgid "Pages:"
+msgstr ""
+
+#: content-featured-post.php:27
+#@ shopera
+msgid "Brand new collection"
+msgstr ""
+
+#: content-none.php:12
+#@ shopera
+msgid "Nothing Found"
+msgstr ""
+
+#: content-none.php:18
+#, php-format
+#@ shopera
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: content-none.php:22
+#@ shopera
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: content-none.php:27
+#@ shopera
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#: content.php:112
+#@ shopera
+msgid "No excerpt for this post."
+msgstr ""
+
+#: footer.php:31
+#@ shopera
+msgid "Created by"
+msgstr ""
+
+#: footer.php:31
+#@ shopera
+msgid "Cohhe"
+msgstr ""
+
+#: footer.php:32
+#@ shopera
+msgid "Proudly powered by"
+msgstr ""
+
+#: footer.php:32
+#@ shopera
+msgid "WordPress"
+msgstr ""
+
+#: footer.php:38
+#@ shopera
+msgid "Up"
+msgstr ""
+
+#: functions.php:81
+#@ shopera
+msgid "Top primary menu"
+msgstr ""
+
+#: functions.php:225
+#@ shopera
+msgid "Checkout"
+msgstr ""
+
+#: functions.php:226
+#@ shopera
+msgid "View Cart"
+msgstr ""
+
+#: functions.php:230
+#@ shopera
+msgid "Subtotal:"
+msgstr ""
+
+#: functions.php:255
+#@ shopera
+msgid "Primary Sidebar"
+msgstr ""
+
+#: functions.php:258
+#@ shopera
+msgid "Main sidebar that appears on the left."
+msgstr ""
+
+#: functions.php:265
+#@ shopera
+msgid "Content Sidebar"
+msgstr ""
+
+#: functions.php:268
+#: functions.php:278
+#@ shopera
+msgid "Additional sidebar that appears on the right."
+msgstr ""
+
+#: functions.php:275
+#@ shopera
+msgid "Shop Sidebar"
+msgstr ""
+
+#: functions.php:285
+#@ shopera
+msgid "Footer Widget Area 1"
+msgstr ""
+
+#: functions.php:287
+#: functions.php:296
+#: functions.php:305
+#@ shopera
+msgid "Appears in the footer section of the site."
+msgstr ""
+
+#: functions.php:294
+#@ shopera
+msgid "Footer Widget Area 2"
+msgstr ""
+
+#: functions.php:303
+#@ shopera
+msgid "Footer Widget Area 3"
+msgstr ""
+
+#: functions.php:588
+#@ shopera
+msgid "Pingback:"
+msgstr ""
+
+#: functions.php:588
+#: functions.php:613
+#: image.php:34
+#@ shopera
+msgid "Edit"
+msgstr ""
+
+#: functions.php:611
+#@ shopera
+msgid "Reply"
+msgstr ""
+
+#: functions.php:617
+#@ shopera
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: functions.php:637
+#@ shopera
+msgid "Name"
+msgstr ""
+
+#: functions.php:642
+#@ shopera
+msgid "Email"
+msgstr ""
+
+#: functions.php:647
+#@ shopera
+msgid "Website"
+msgstr ""
+
+#: functions.php:728
+#, php-format
+#@ shopera
+msgid "Page %s"
+msgstr ""
+
+#: functions.php:888
+#@ shopera
+msgid "Product"
+msgstr ""
+
+#: image.php:65
+#@ shopera
+msgid "Previous Image"
+msgstr ""
+
+#: image.php:66
+#@ shopera
+msgid "Next Image"
+msgstr ""
+
+#: inc/customizer.php:19
+#: inc/customizer.php:20
+#@ shopera
+msgid "Background may only be visible on wide screens."
+msgstr ""
+
+#: inc/customizer.php:28
+#@ shopera
+msgid "Site Title Color"
+msgstr ""
+
+#: inc/customizer.php:31
+#@ shopera
+msgid "Display Site Title &amp; Tagline"
+msgstr ""
+
+#: inc/customizer.php:35
+#: inc/featured-content.php:410
+#@ shopera
+msgid "Featured Content"
+msgstr ""
+
+#: inc/customizer.php:36
+#, php-format
+#@ shopera
+msgid "Use <a href=\"%1$s\">featured</a> tag to feature your posts. If no posts match the tag, <a href=\"%2$s\">sticky posts</a> will be displayed instead."
+msgstr ""
+
+#: inc/customizer.php:41
+#: inc/featured-content-side.php:408
+#@ shopera
+msgid "Featured Side Content"
+msgstr ""
+
+#: inc/customizer.php:42
+#, php-format
+#@ shopera
+msgid "Use <a href=\"%1$s\">featured-side</a> tag to feature your posts. If no posts match the tag, <a href=\"%2$s\">sticky posts</a> will be displayed instead."
+msgstr ""
+
+#: inc/customizer.php:50
+#@ shopera
+msgid "General settings"
+msgstr ""
+
+#: inc/customizer.php:51
+#@ shopera
+msgid "You can configure your general theme settings here"
+msgstr ""
+
+#: inc/customizer.php:58
+#: inc/customizer.php:66
+#@ shopera
+msgid "Website logo"
+msgstr ""
+
+#: inc/customizer.php:59
+#@ shopera
+msgid "Please upload your logo, recommended logo size should be between 262x80"
+msgstr ""
+
+#: inc/customizer.php:75
+#@ shopera
+msgid "Copyright"
+msgstr ""
+
+#: inc/customizer.php:76
+#@ shopera
+msgid "Please provide short copyright text which will be shown in footer."
+msgstr ""
+
+#: inc/customizer.php:95
+#@ shopera
+msgid "Scroll to top"
+msgstr ""
+
+#: inc/customizer.php:96
+#@ shopera
+msgid "Do you want to enable \"Scroll to Top\" button?"
+msgstr ""
+
+#: inc/customizer.php:115
+#: inc/customizer.php:123
+#@ shopera
+msgid "Favicon"
+msgstr ""
+
+#: inc/customizer.php:116
+#@ shopera
+msgid "Do you have favicon? You can upload it here."
+msgstr ""
+
+#: inc/customizer.php:132
+#@ shopera
+msgid "Comment form URL field"
+msgstr ""
+
+#: inc/customizer.php:133
+#@ shopera
+msgid "Do you want to disable comment URL field?"
+msgstr ""
+
+#: inc/customizer.php:152
+#@ shopera
+msgid "Slider status"
+msgstr ""
+
+#: inc/customizer.php:153
+#@ shopera
+msgid "Enable or disable the front page slider."
+msgstr ""
+
+#: inc/customizer.php:172
+#@ shopera
+msgid "Post grid status"
+msgstr ""
+
+#: inc/customizer.php:173
+#@ shopera
+msgid "Do you want to display posts in a grid?"
+msgstr ""
+
+#: inc/customizer.php:192
+#@ shopera
+msgid "Layout"
+msgstr ""
+
+#: inc/customizer.php:193
+#@ shopera
+msgid "Choose a layout for your theme pages. Note that a widget has to be inside widget are, or the layout won't change."
+msgstr ""
+
+#: inc/customizer.php:222
+#@ shopera
+msgid "Font settings"
+msgstr ""
+
+#: inc/customizer.php:223
+#@ shopera
+msgid "You can configure your themes font settings here, if there are characters in your language that are not supported by a particular font, disable it.."
+msgstr ""
+
+#: inc/customizer.php:230
+#@ shopera
+msgid "Theme fonts"
+msgstr ""
+
+#: inc/customizer.php:231
+#@ shopera
+msgid "If there are characters in your language that are not supported by any of these fonts, disable them."
+msgstr ""
+
+#: inc/customizer.php:294
+#@ shopera
+msgid "Font size"
+msgstr ""
+
+#: inc/customizer.php:295
+#@ shopera
+msgid "You can change your websites main title size."
+msgstr ""
+
+#: inc/customizer.php:378
+#@ shopera
+msgid "Follow us on Twitter"
+msgstr ""
+
+#: inc/customizer.php:379
+#@ shopera
+msgid "Join us on Facebook"
+msgstr ""
+
+#: inc/customizer.php:380
+#@ shopera
+msgid "Join us on Google+"
+msgstr ""
+
+#: inc/customizer.php:381
+#@ shopera
+msgid "Cohhe.com"
+msgstr ""
+
+#: inc/customizer.php:434
+#@ shopera
+msgid "Shopera 1.0"
+msgstr ""
+
+#: inc/customizer.php:437
+#, php-format
+#@ shopera
+msgid "The home page features your choice of up to 6 posts prominently displayed in a grid or slider, controlled by the <a href=\"%1$s\">featured</a> tag; you can change the tag and layout in <a href=\"%2$s\">Appearance &rarr; Customize</a>. If no posts match the tag, <a href=\"%3$s\">sticky posts</a> will be displayed instead."
+msgstr ""
+
+#: inc/customizer.php:438
+#, php-format
+#@ shopera
+msgid "Enhance your site design by using <a href=\"%s\">Featured Images</a> for posts you&rsquo;d like to stand out (also known as post thumbnails). This allows you to associate an image with your post without inserting it. Shopera 1.0 uses featured images for posts and pages&mdash;above the title&mdash;and in the Featured Content area on the home page."
+msgstr ""
+
+#: inc/customizer.php:439
+#, php-format
+#@ shopera
+msgid "For an in-depth tutorial, and more tips and tricks, visit the <a href=\"%s\">Shopera 1.0 documentation</a>."
+msgstr ""
+
+#: inc/featured-content-side.php:409
+#: inc/featured-content.php:411
+#, php-format
+#@ shopera
+msgid "Use the <a href=\"%1$s\">\"featured\" tag</a> to feature your posts. You can change this to a tag of your choice; if no posts match the tag, <a href=\"%2$s\">sticky posts</a> will be displayed instead."
+msgstr ""
+
+#: inc/featured-content-side.php:428
+#: inc/featured-content.php:430
+#@ shopera
+msgid "Tag Name"
+msgstr ""
+
+#: inc/metaboxes/layouts.php:8
+#@ shopera
+msgid "Layouts"
+msgstr ""
+
+#: inc/metaboxes/layouts.php:15
+#@ shopera
+msgid "Layout type"
+msgstr ""
+
+#: inc/template-tags.php:47
+#@ shopera
+msgid "&larr; Previous"
+msgstr ""
+
+#: inc/template-tags.php:48
+#@ shopera
+msgid "Next &rarr;"
+msgstr ""
+
+#: inc/template-tags.php:86
+#, php-format
+#@ shopera
+msgid "<span class=\"meta-nav\">Published In</span>%title"
+msgstr ""
+
+#: inc/template-tags.php:88
+#, php-format
+#@ shopera
+msgid "<span class=\"post-left\">%title<span class=\"meta-nav\">Previous Post</span></span>"
+msgstr ""
+
+#: inc/template-tags.php:89
+#, php-format
+#@ shopera
+msgid "<span class=\"post-right\">%title<span class=\"meta-nav\">Next Post</span></span>"
+msgstr ""
+
+#: inc/template-tags.php:108
+#@ shopera
+msgid "Sticky"
+msgstr ""
+
+#: search.php:24
+#, php-format
+#@ shopera
+msgid "Search Results for: %s"
+msgstr ""
+
+#: search.php:24
+#: searchform.php:2
+#@ shopera
+msgid "Search..."
+msgstr ""
+
+#: searchform.php:2
+#: woocommerce/product-searchform.php:2
+#@ shopera
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:9
+#: woocommerce/product-searchform.php:3
+#@ shopera
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: tag.php:28
+#, php-format
+#@ shopera
+msgid "Tag Archives: %s"
+msgstr ""
+
+#: taxonomy-post_format.php:33
+#@ shopera
+msgid "Asides"
+msgstr ""
+
+#: taxonomy-post_format.php:36
+#@ shopera
+msgid "Images"
+msgstr ""
+
+#: taxonomy-post_format.php:39
+#@ shopera
+msgid "Videos"
+msgstr ""
+
+#: taxonomy-post_format.php:42
+#@ shopera
+msgid "Audio"
+msgstr ""
+
+#: taxonomy-post_format.php:45
+#@ shopera
+msgid "Quotes"
+msgstr ""
+
+#: taxonomy-post_format.php:48
+#@ shopera
+msgid "Links"
+msgstr ""
+
+#: taxonomy-post_format.php:51
+#@ shopera
+msgid "Galleries"
+msgstr ""
+
+#: woocommerce/add-to-wishlist-button.php:15
+#@ shopera
+msgid "Add to wishlist"
+msgstr ""
+
+#: woocommerce/add-to-wishlist.php:21
+#@ shopera
+msgid "Product added!"
+msgstr ""
+
+#: woocommerce/add-to-wishlist.php:23
+#: woocommerce/add-to-wishlist.php:30
+#@ shopera
+msgid "Browse Wishlist"
+msgstr ""
+
+#: woocommerce/add-to-wishlist.php:28
+#@ shopera
+msgid "The product is already in the wishlist!"
+msgstr ""
+
+#: woocommerce/content-single-product.php:79
+#@ shopera
+msgid "Recent products"
+msgstr ""
+
+#: woocommerce/product-searchform.php:2
+#@ shopera
+msgctxt "placeholder"
+msgid "Search Products&hellip;"
+msgstr ""
+

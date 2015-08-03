@@ -1,0 +1,71 @@
+Shopera changelog
+
+= Version 1.0.13 =
+* Removed commented code from functions.js
+* Added logo font size through wp_head hook
+
+= Version 1.0.12 =
+* Fixed social links at customizer
+* Fixed text domain at WooCommerce templates
+* Remove license information for Option Tree
+* Added recommended logo size at customizer
+* Default layout for posts now is taken from customizer
+* Properly sanitized customizer checkboxes
+* Sanitized shopera_font_size with absint
+* Updated translation files
+
+= Version 1.0.11 =
+* Used esc_atrr to echo ICL_LANGUAGE_CODE
+* Fixed post type design issues
+* Moved shopera_get_woo_categories function to shopera-functionality plugin
+* Got rid of Option Tree and moved theme options to customizer
+* Fixed template issue with WooCommerce, kept templates to bare minimum
+
+= Version 1.0.10 =
+* Updated Option Tree version
+* Prefixed create_meta_boxes class
+* Using sane defaults for Option Tree
+* Updated Isotope version to 2.2 and updated its license
+* Implemented microformats for theme template
+* Declared support for WooCommerce
+* Updated some WooCommerce templates
+* Fixed Layout at Add New post page
+* Removed log statement from admin-master.js
+
+= Version 1.0.9 =
+* Moved add_theme_support call inside shopera_setup function
+* Removed custom-header support from style.css file
+* Enqueued admin-master.js script in pages where it's being used
+* Removed title tag in header.php
+* Styled galleries
+* Fixed some translation issues
+* Added some image licenses
+
+= Version 1.0.8 =
+* Prefixed classes with theme slug
+* Prefixed responsiveness.css file
+* Fixed some untranslatable strings at Theme Options
+* Added URL field controls for comment form, it can now be hidden at Theme Options
+* Added missing license information
+* Fixed Layout type option in posts
+* Implemented Favicon through wp_head hook
+* Made some data sanitization improvements
+* Fixed minor JS issues
+
+= Version 1.0.7 =
+* Added theme support for "title-tag"
+* Updated license information for bundled resources
+* Created documentation, it can be found here: http://documentation.cohhe.com/shopera/
+* Correctly implemented Option Tree
+* Fixed "Featured Content" at customizer
+* Removed backward compatibility for WP > 3.6
+* Prefixed theme functions with theme slug
+* Included admin CSS/JS only where it needs to be
+* Removed some unnecessary WooCommerce templates
+* Sanitized theme options
+* Made some untranslatable strings translatable
+* Changed POT file name
+* Fixed text domain where it wasn't correct
+
+= Version 1.0 =
+* Initial release

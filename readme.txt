@@ -58,3 +58,7 @@ http://pixabay.com/en/photography-fashion-women-design-459495/
 http://pixabay.com/en/women-young-girl-beauty-bella-630033/
 http://pixabay.com/en/man-glasses-hipster-beard-adult-597179/
 http://pixabay.com/en/office-camera-creative-home-office-581122/
+https://pixabay.com/en/happy-couple-young-people-family-692725/
+https://pixabay.com/en/women-girls-models-beach-moped-685783/
+https://pixabay.com/en/fashion-young-portrait-814653/
+https://pixabay.com/en/woman-beach-model-beauty-fashion-692755/

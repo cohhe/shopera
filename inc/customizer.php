@@ -372,11 +372,11 @@ if ( class_exists( 'WP_Customize_Section' ) && !class_exists( 'Shopera_Customize
 						line-height: 20px;
 					}
 					#customize-theme-controls>ul>#accordion-section-shopera_social_links {
-						margin-top: 40px;
+						margin-top: 10px;
 					}
 					.cohhe-social-profiles li.documentation {
-						text-align: center;
-						margin-bottom: 15px;
+						text-align: right;
+						margin-bottom: 60px;
 					}
 				</style>
 				<ul class="cohhe-social-profiles">

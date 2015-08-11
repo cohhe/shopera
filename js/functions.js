@@ -102,20 +102,22 @@ jQuery(document).ready(function($) {
 				$(this).parent().find('form').stop().fadeIn();
 			}
 			$(this).addClass('active');
-		})
-
-		jQuery('.testimonial-container').jcarousel({
-			wrap: "circular",
-			animation: {
-				duration: 0
-			}
-		}).jcarouselAutoscroll({
-			interval: 5000,
-			target: '+=1',
-			autostart: true
-		}).on("jcarousel:scroll", function(event, carousel) {
-			jQuery("#tbtestimonial-listing").parent().hide().fadeIn(700);
 		});
+
+		if ( jQuery('#tbtestimonial-listing').length && jQuery('#tbtestimonial-listing').children().length > 1 ) {
+			jQuery('.testimonial-container').jcarousel({
+				wrap: "circular",
+				animation: {
+					duration: 0
+				}
+			}).jcarouselAutoscroll({
+				interval: 5000,
+				target: '+=1',
+				autostart: true
+			}).on("jcarousel:scroll", function(event, carousel) {
+				jQuery("#tbtestimonial-listing").parent().hide().fadeIn(700);
+			});
+		}
 
 		if ( jQuery('.testimonial-container').length ) {
 			jQuery('.testimonial-container').css({'left': '-'+jQuery('.testimonial-container').offset().left+'px', 'width': jQuery(window).width()+'px'});

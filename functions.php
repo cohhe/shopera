@@ -210,27 +210,55 @@ function shopera_woocommerce_header_add_to_cart_fragment( $fragments ) {
 				$cart_items = $woocommerce->cart->cart_contents;
 				foreach ($cart_items as $cart_value) {
 					$price = get_post_meta( $cart_value['product_id'], '_regular_price', true);
+
+					switch( get_option( 'woocommerce_currency_pos' ) ) {
+						case 'right':
+							$item_price = $cart_value['line_subtotal'].get_woocommerce_currency_symbol();
+							$total_item_price = $price.get_woocommerce_currency_symbol();
+							$cart_subtotal = $woocommerce->cart->cart_contents_total.get_woocommerce_currency_symbol();
+							break;
+						case 'right_space':
+							$item_price = $cart_value['line_subtotal'].' '.get_woocommerce_currency_symbol();
+							$total_item_price = $price.' '.get_woocommerce_currency_symbol();
+							$cart_subtotal = $woocommerce->cart->cart_contents_total.' '.get_woocommerce_currency_symbol();
+							break;
+						case 'left':
+							$item_price = get_woocommerce_currency_symbol().$cart_value['line_subtotal'];
+							$total_item_price = get_woocommerce_currency_symbol().$price;
+							$cart_subtotal = get_woocommerce_currency_symbol() . $woocommerce->cart->cart_contents_total;
+							break;
+						case 'left_space':
+							$item_price = get_woocommerce_currency_symbol().' '.$cart_value['line_subtotal'];
+							$total_item_price = get_woocommerce_currency_symbol().' '.$price;
+							$cart_subtotal = get_woocommerce_currency_symbol().' '.$woocommerce->cart->cart_contents_total;
+							break;
+						default:
+							$item_price = get_woocommerce_currency_symbol().$cart_value['line_subtotal'];
+							$total_item_price = get_woocommerce_currency_symbol().$price;
+							$cart_subtotal = get_woocommerce_currency_symbol() . $woocommerce->cart->cart_contents_total;
+							break;
+					}
+
 					echo '<div class="cart-list-item">';
 						echo get_the_post_thumbnail($cart_value['data']->id, 'shopera-cart-item');
 						echo '<div class="product-info">';
 							echo '<span class="cart-item-title">'.$cart_value['data']->post->post_title.'</span>';
-							echo '<span class="quantity">'.$cart_value['quantity'].' x <span>'.get_woocommerce_currency_symbol().$cart_value['line_subtotal'].'</span></span>';
+							echo '<span class="quantity">'.$cart_value['quantity'].' x <span>'.$item_price.'</span></span>';
 						echo '</div>';
-						echo '<span class="cart-item-price">'.get_woocommerce_currency_symbol().$price.'</span>';
+						echo '<span class="cart-item-price">'.$total_item_price.'</span>';
 						echo '<div class="clearfix"></div>';
 					echo '</div>';
 				}
 			?>
 			<div class="cart-lower">
 				<?php 
-				global $woocommerce;
 				if ( sizeof( $woocommerce->cart->cart_contents) > 0 ) { ?>
 				<a href="<?php echo esc_url( $woocommerce->cart->get_checkout_url() ); ?>" class="button left" title="<?php _e( 'Checkout', 'shopera' ) ?>"><?php _e( 'Checkout', 'shopera' ) ?></a>
 				<a href="<?php echo esc_url( $woocommerce->cart->get_cart_url() ); ?>" class="button right"><?php _e( 'View Cart', 'shopera' ); ?></a>
 				
 				<span class="subtotal">
 					<?php
-					echo __('Subtotal:', 'shopera'). ' <span>' . get_woocommerce_currency_symbol() . $woocommerce->cart->cart_contents_total.'</span>';
+					echo __('Subtotal:', 'shopera'). ' <span>' . $cart_subtotal .'</span>';
 					?>
 				</span>
 				<div class="clearfix"></div>
@@ -243,7 +271,6 @@ function shopera_woocommerce_header_add_to_cart_fragment( $fragments ) {
 	$fragments['div.cart-contents'] = ob_get_clean();
 	
 	return $fragments;
-	
 }
 
 /**
@@ -983,11 +1010,10 @@ function shopera_register_required_plugins() {
 			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
 		),
 		array(
-			'name'     				=> 'TBTestimonials', // The plugin name
-			'slug'     				=> 'tb-testimonials', // The plugin slug (typically the folder name)
-			'source'   				=> get_template_directory() . '/inc/tgm-activation/plugins/tb-testimonials.zip', // The plugin source
+			'name'     				=> 'Easy Testimonials', // The plugin name
+			'slug'     				=> 'easy-testimonials', // The plugin slug (typically the folder name)
 			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '1.7.4', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+			'version' 				=> '1.31.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
 			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
 			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL

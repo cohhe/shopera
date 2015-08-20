@@ -4,7 +4,7 @@ Theme URI: http://cohhe.com/project-view/shopera/
 Author: Cohhe
 Author URI: http://cohhe.com/
 Description: Shopera is FREE, clean, modern, responsive and highly customizable WooCommerce theme. It’s perfect for any kind of web shop. It looks great with all types of devices (laptops, tablets and mobiles). You can get more information about Shopera at http://cohhe.com/project-view/shopera/
-Version: 1.2.3
+Version: 1.2.4
 License: GNU General Public License v3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
@@ -2786,6 +2786,18 @@ body.single-product #content .related.products .product {
 	margin: 0;
 }
 
+#review_form #commentform {
+	margin-top: 15px;
+}
+
+.woocommerce #review_form #commentform .comment-form-comment {
+	margin-top: 30px;
+}
+
+.woocommerce #review_form #commentform .comment-form-rating label {
+	margin-top: 15px;
+}
+
 .woocommerce ul.products li.product a.add_to_cart_button:before {
 	content: "\e116";
 }
@@ -2816,14 +2828,14 @@ body.single-product #content .related.products .product {
 }
 
 .woocommerce #review_form #respond textarea {
-	background: #fafafa;
+	background: transparent;
 	border-color: #ccc;
 	border-radius: 0;
 }
 
 .woocommerce #review_form #respond textarea:hover,
 .woocommerce #review_form #respond textarea:focus {
-	background: #fff;
+	background: transparent;
 	outline: none;
 }
 
@@ -3683,10 +3695,14 @@ h2.comments-title {
 	border-width: 1px;
 }
 
-.comment-form-author span,
-.comment-form-email span,
-.comment-form-url span,
-.comment-form-comment span,
+.comment-form-author > span,
+.comment-form-email > span,
+.comment-form-url > span,
+.comment-form-comment > span,
+.comment-form-author > label,
+.comment-form-email > label,
+.comment-form-url > label,
+.comment-form-comment > label,
 .wpcf7-form p label {
 	position: absolute;
 	left: 10px;
@@ -3704,10 +3720,14 @@ h2.comments-title {
 	margin-bottom: 30px;
 }
 
-.comment-form-author.input-focused span,
-.comment-form-email.input-focused span,
-.comment-form-url.input-focused span,
-.comment-form-comment.input-focused span,
+.comment-form-author.input-focused > span,
+.comment-form-email.input-focused > span,
+.comment-form-url.input-focused > span,
+.comment-form-comment.input-focused > span,
+.comment-form-author.input-focused > label,
+.comment-form-email.input-focused > label,
+.comment-form-url.input-focused > label,
+.comment-form-comment.input-focused > label,
 .wpcf7-form p.cf-input-focused label {
 	top: -25px;
 	left: 0;

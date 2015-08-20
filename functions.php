@@ -946,8 +946,7 @@ function shopera_register_required_plugins() {
 	$plugins = array(
 		array(
 			'name'     				=> 'Shopera Functionality', // The plugin name
-			'slug'     				=> 'shopera-functionality', // The plugin slug (typically the folder name)
-			'source'   				=> 'https://wordpress.org/plugins/functionality-for-shopera-theme/', // The plugin source
+			'slug'     				=> 'functionality-for-shopera-theme', // The plugin slug (typically the folder name)
 			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
 			'version' 				=> '1.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
 			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch

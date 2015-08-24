@@ -634,7 +634,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 			if ( has_filter( 'tgmpa_admin_menu_use_add_theme_page' ) ) {
 				_deprecated_function( 'The "tgmpa_admin_menu_use_add_theme_page" filter', '2.5.0', esc_html__( 'Set the parent_slug config variable instead.', 'tgmpa' ) );
 			}
-			add_submenu_page( $args['parent_slug'], $args['page_title'], $args['menu_title'], $args['capability'], $args['menu_slug'], $args['function'] );
+			add_theme_page( $args['page_title'], $args['menu_title'], $args['capability'], $args['menu_slug'], $args['function'] );
 			
 		}
 

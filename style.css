@@ -4,7 +4,7 @@ Theme URI: http://cohhe.com/project-view/shopera/
 Author: Cohhe
 Author URI: http://cohhe.com/
 Description: Shopera is FREE, clean, modern, responsive and highly customizable WooCommerce theme. It’s perfect for any kind of web shop. It looks great with all types of devices (laptops, tablets and mobiles). You can get more information about Shopera at http://cohhe.com/project-view/shopera/
-Version: 1.2.4
+Version: 1.2.5
 License: GNU General Public License v3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
@@ -1865,15 +1865,6 @@ article .entry-content table tr:nth-child(even) {
 	color: #f45245;
 }
 
-.woo-category-container .woo-category-item a {
-	display: block;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-}
-
 .woo-category-item .woo-category-image {
 	height: 234px;
 	background-size: cover;
@@ -1911,8 +1902,8 @@ article .entry-content table tr:nth-child(even) {
 }
 
 .woo-category-inner .woo-category-title {
-	text-transform: uppercase;
 	color: #fff;
+	text-transform: uppercase;
 	font-size: 36px;
 	line-height: 30px;
 	font-weight: bold;
@@ -1938,11 +1929,20 @@ article .entry-content table tr:nth-child(even) {
 	text-align: center;
 	display: block;
 	padding-top: 10px;
-
-	-webkit-transition: all 0.2s ease-in;
+	float: right;
+	clear: both;
+/*	-webkit-transition: all 0.2s ease-in;
 	-moz-transition: all 0.2s ease-in;
 	-o-transition: all 0.2s ease-in;
-	transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;*/
+}
+
+.woo-category-container.three .woo-category-item:first-child .woo-category-inner {
+	width: auto;
+}
+
+.woo-category-container.three .woo-category-item:first-child .woo-category-title {
+	max-width: none;
 }
 
 .woo-category-container > div:nth-child(2) .woo-category-inner,
@@ -2210,6 +2210,7 @@ body .container ul.products li.product .product-info {
 	text-transform: uppercase;
 	text-align: center;
 	padding-top: 10px !important;
+	margin-bottom: 0;
 }
 
 .container .in-content-testimonial .testimonial-data .testimonial-company {
@@ -4853,4 +4854,8 @@ p.site-description {
 .widget > ul,
 .widget .menu {
 	margin-left: 0;
+}
+
+body.home #content article {
+	width: 100%;
 }

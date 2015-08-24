@@ -273,10 +273,7 @@ jQuery(document).ready(function($) {
 
 	jQuery('body.home .site-content').isotope();
 
-});
-
-jQuery( document ).ajaxStop(function() {
-	jQuery('.cart-contents .cart-items').click(function() {
+	jQuery(document).on('click', '.cart-contents .cart-items', function() {
 		if ( jQuery(this).hasClass('active') ) {
 			jQuery('.cart-content-list').stop().fadeOut();
 		} else {

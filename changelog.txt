@@ -1,5 +1,24 @@
 Shopera changelog
 
+= Version 1.2.5 =
+* Added missing language strings
+* Changed add_submenu_page() to add_theme_page()
+* Fixed some styling issues;
+* Fixed cart button
+
+= Version 1.2.4 =
+* Fixed comment form style;
+* Updated WooCommerce template
+
+= Version 1.2.3 =
+* Fixed the Shopera functionality plugin installation issue
+
+= Version 1.2.2 =
+* Added documentation button at customizer
+* Updated images copyright information
+* Added missing TGM plugin files
+* Removed tb-testimonials.zip, now using Easy Testimonials for testimonials
+
 = Version 1.0.13 =
 * Removed commented code from functions.js
 * Added logo font size through wp_head hook

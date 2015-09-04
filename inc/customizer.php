@@ -68,6 +68,23 @@ function shopera_customize_register( $wp_customize ) {
 		'settings' => 'shopera_logo',
 	) ) );
 
+	// woocommerce shop breadcrumb
+	$wp_customize->add_section( 'shopera_general_shop_breadcrumb', array(
+		'priority'       => 10,
+		'capability'     => 'edit_theme_options',
+		'title'          => __( 'WooCommerce shop breadcrumb' , 'shopera'),
+		'description'    => __( 'Please upload your image for WooCommerce shop breadcrumbs.' , 'shopera'),
+		'panel'          => 'shopera_general_panel'
+	) );
+
+	$wp_customize->add_setting( 'shopera_shop_breadcrumbs', array( 'default' => get_template_directory_uri().'/images/breadcrumbs.jpg', 'sanitize_callback' => 'esc_url_raw' ) );
+
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'shopera_shop_breadcrumbs', array(
+		'label'    => __( 'WooCommerce shop breadcrumb', 'shopera' ),
+		'section'  => 'shopera_general_shop_breadcrumb',
+		'settings' => 'shopera_shop_breadcrumbs',
+	) ) );
+
 	// Copyright
 	$wp_customize->add_section( 'shopera_general_copyright', array(
 		'priority'       => 20,

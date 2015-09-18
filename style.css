@@ -1902,6 +1902,17 @@ article .entry-content table tr:nth-child(even) {
 	margin-bottom: 20px;
 }
 
+.woo-category-container > div:nth-child(2) a,
+.woo-category-container > div:nth-child(3) a {
+	padding: 0;
+}
+
+body .woo-category-container > div:nth-child(2) .woo-category-title,
+body .woo-category-container > div:nth-child(3) .woo-category-title {
+	width: 100%;
+	right: 0;
+}
+
 .woo-category-container > div:nth-child(3) {
 	margin-left: 20px;
 }
@@ -1954,6 +1965,8 @@ article .entry-content table tr:nth-child(even) {
 .woo-category-container > div:nth-child(3) .woo-category-inner {
 	top: 50%;
 	transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
 }
 
 .woo-category-container > div:nth-child(2) .woo-category-title,

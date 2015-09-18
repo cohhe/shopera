@@ -4,7 +4,7 @@ Theme URI: http://cohhe.com/project-view/shopera/
 Author: Cohhe
 Author URI: http://cohhe.com/
 Description: Shopera is FREE, clean, modern, responsive and highly customizable WooCommerce theme. It’s perfect for any kind of web shop. It looks great with all types of devices (laptops, tablets and mobiles). You can get more information about Shopera at http://cohhe.com/project-view/shopera/
-Version: 1.2.6
+Version: 1.2.7
 License: GNU General Public License v3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
@@ -2077,15 +2077,31 @@ body .container ul.products li.product .product-image img {
 
 .container .woocommerce ul.products li.product .price del,
 body.woocommerce-page ul.products li.product .price del {
-	color: #fff;
+	color: #ddd;
+	opacity: 1;
 	font-size: 14px;
 	float: left;
+	width: 100%;
+	text-align: center;
+}
+
+.container .woocommerce ul.products li.product .price del span,
+body.woocommerce-page ul.products li.product .price del span {
+	text-decoration: line-through;
 }
 
 .container .woocommerce ul.products li.product .price ins,
 body.woocommerce-page ul.products li.product .price ins {
 	float: left;
-	padding-left: 10px;
+	width: 100%;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.product-image .price .amount {
+	height: 24px;
+	line-height: 24px;
+	display: inline-block;
 }
 
 .container .woocommerce .products .star-rating,
@@ -4712,7 +4728,7 @@ body.single-product.woocommerce .woocommerce-message {
 	border-radius: 0;
 	color: #666;
 	height: 41px;
-	width: 253px;
+	width: 100%;
 	margin-bottom: 10px;
 }
 
@@ -4878,4 +4894,23 @@ p.site-description {
 
 body.home #content article {
 	width: 100%;
+}
+
+#main .widget.widget_fastflickrwidget a {
+	width: 33.33%;
+	display: inline-block;
+	padding-bottom: 33.33%;
+	position: relative;
+	overflow: hidden;
+	margin-top: -5px;
+}
+
+#main .widget.widget_fastflickrwidget a img {
+	margin: 0;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	padding-right: 1px;
 }

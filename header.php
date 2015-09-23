@@ -77,7 +77,9 @@ if ( ( SHOPERA_LAYOUT == 'sidebar-left' && is_active_sidebar( 'sidebar-1' ) ) ||
 					}
 					?>
 				</div>
-				<div class="cart-contents"></div>
+				<?php if ( class_exists( 'WooCommerce' ) ) { ?>
+					<div class="cart-contents"></div>
+				<?php } ?>
 				<div class="header_search"><?php get_search_form(); ?></div>
 				<?php if ( has_nav_menu( 'primary' ) ) { ?>
 				<button type="button" class="navbar-toggle visible-xs visible-sm" data-toggle="collapse" data-target=".site-navigation">

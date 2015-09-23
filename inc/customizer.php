@@ -68,6 +68,23 @@ function shopera_customize_register( $wp_customize ) {
 		'settings' => 'shopera_logo',
 	) ) );
 
+	// woocommerce shop breadcrumb
+	$wp_customize->add_section( 'shopera_general_shop_breadcrumb', array(
+		'priority'       => 10,
+		'capability'     => 'edit_theme_options',
+		'title'          => __( 'WooCommerce shop breadcrumb' , 'shopera'),
+		'description'    => __( 'Please upload your image for WooCommerce shop breadcrumbs.' , 'shopera'),
+		'panel'          => 'shopera_general_panel'
+	) );
+
+	$wp_customize->add_setting( 'shopera_shop_breadcrumbs', array( 'default' => get_template_directory_uri().'/images/breadcrumbs.jpg', 'sanitize_callback' => 'esc_url_raw' ) );
+
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'shopera_shop_breadcrumbs', array(
+		'label'    => __( 'WooCommerce shop breadcrumb', 'shopera' ),
+		'section'  => 'shopera_general_shop_breadcrumb',
+		'settings' => 'shopera_shop_breadcrumbs',
+	) ) );
+
 	// Copyright
 	$wp_customize->add_section( 'shopera_general_copyright', array(
 		'priority'       => 20,
@@ -376,11 +393,16 @@ if ( class_exists( 'WP_Customize_Section' ) && !class_exists( 'Shopera_Customize
 					}
 					.cohhe-social-profiles li.documentation {
 						text-align: right;
+						margin-bottom: 10px;
+					}
+					.cohhe-social-profiles li.gopremium {
+						text-align: right;
 						margin-bottom: 60px;
 					}
 				</style>
 				<ul class="cohhe-social-profiles">
 					<li class="documentation"><a href="http://documentation.cohhe.com/shopera" class="button button-primary button-hero" target="_blank"><?php _e( 'Documentation', 'shopera' ); ?></a></li>
+					<li class="gopremium"><a href="http://cohhe.com/project-view/shopera-pro/" class="button button-secondary button-hero" target="_blank"><?php _e( 'Go Premium', 'shopera' ); ?></a></li>
 					<li class="social-twitter"><i class="twitter"></i><a href="https://twitter.com/Cohhe_Themes" target="_blank"><?php _e( 'Follow us on Twitter', 'shopera' ); ?></a></li>
 					<li class="social-facebook"><i class="facebook"></i><a href="https://www.facebook.com/cohhethemes" target="_blank"><?php _e( 'Join us on Facebook', 'shopera' ); ?></a></li>
 					<li class="social-googleplus"><i class="googleplus"></i><a href="https://plus.google.com/+Cohhe_Themes/posts" target="_blank"><?php _e( 'Join us on Google+', 'shopera' ); ?></a></li>

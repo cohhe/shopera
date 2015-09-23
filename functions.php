@@ -54,6 +54,11 @@ function shopera_setup() {
 	// TGM plugins activation
 	require_once(get_template_directory() . '/inc/tgm-activation/class-tgm-plugin-activation.php');
 
+	/**
+	* Required: widgets
+	*/
+	require_once(get_template_directory() . '/inc/widgets/fast-flickr-widget.php');
+
 	/*
 	 * Make Shopera 1.0 available for translation.
 	 *
@@ -461,6 +466,11 @@ function shopera_scripts() {
 	wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/js/html5.js', array(), '', false );
 
 	wp_enqueue_script( 'isotope', get_template_directory_uri() . '/js/jquery.isotope.min.js', array(), '', false );
+
+	$shop_breadcrumb_img = get_theme_mod('shopera_shop_breadcrumbs', get_template_directory_uri().'/images/breadcrumbs.jpg');
+	if ( $shop_breadcrumb_img ) {
+		wp_add_inline_style( 'shopera-style', '.woocommerce-breadcrumb { background-image: url('.$shop_breadcrumb_img.'); }' );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'shopera_scripts' );
 
@@ -903,6 +913,8 @@ function shopera_favicon() {
 	$favicon = get_theme_mod('shopera_favicon');
 	if ( $favicon ) {
 		echo '<link rel="shortcut icon" href="' . esc_url( $favicon ) . '" />';
+	} else {
+		echo '<link rel="shortcut icon" href="' . get_template_directory_uri() . '/images/favicon.png" />';
 	}
 }
 add_action('wp_head', 'shopera_favicon');

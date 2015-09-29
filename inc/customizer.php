@@ -33,13 +33,13 @@ function shopera_customize_register( $wp_customize ) {
 	// Add the featured content section in case it's not already there.
 	$wp_customize->add_section( 'featured_content', array(
 		'title'       => __( 'Featured Content', 'shopera' ),
-		'description' => sprintf( __( 'Use <a href="%1$s">featured</a> tag to feature your posts. If no posts match the tag, <a href="%2$s">sticky posts</a> will be displayed instead.', 'shopera' ), admin_url( '/edit.php?tag=featured' ), admin_url( '/edit.php?show_sticky=1' ) ),
+		'description' => sprintf( __( 'To feature your posts use <a href="%1$s">featured</a> tag or provide your own tag below. If no posts match the tag, <a href="%2$s">sticky posts</a> will be displayed instead.', 'shopera' ), admin_url( '/edit.php?tag=featured' ), admin_url( '/edit.php?show_sticky=1' ) ),
 		'priority'    => 130,
 	) );
 
 	$wp_customize->add_section( 'featured_content_side', array(
 		'title'       => __( 'Featured Side Content', 'shopera' ),
-		'description' => sprintf( __( 'Use <a href="%1$s">featured-side</a> tag to feature your posts. If no posts match the tag, <a href="%2$s">sticky posts</a> will be displayed instead.', 'shopera' ), admin_url( '/edit.php?tag=featured-side' ), admin_url( '/edit.php?show_sticky=1' ) ),
+		'description' => sprintf( __( 'To feature your posts use <a href="%1$s">featured-side</a> tag or provide your own tag below. If no posts match the tag, <a href="%2$s">sticky posts</a> will be displayed instead.', 'shopera' ), admin_url( '/edit.php?tag=featured-side' ), admin_url( '/edit.php?show_sticky=1' ) ),
 		'priority'    => 140,
 	) );
 

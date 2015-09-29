@@ -1089,3 +1089,80 @@ function shopera_register_required_plugins() {
 	tgmpa( $plugins, $config );
 }
 add_action( 'tgmpa_register', 'shopera_register_required_plugins' );
+
+add_action( 'load-post.php', 'shopera_metabox_setup' );
+add_action( 'load-post-new.php', 'shopera_metabox_setup' );
+function shopera_metabox_setup() {
+
+	/* Add meta boxes on the 'add_meta_boxes' hook. */
+	add_action( 'add_meta_boxes', 'shopera_add_metabox' );
+
+	/* Save post meta on the 'save_post' hook. */
+	add_action( 'save_post', 'shopera_save_metabox', 10, 2 );
+}
+
+function shopera_save_metabox( $post_id, $post ) {
+
+	/* Verify the nonce before proceeding. */
+	if ( !isset( $_POST['shopera_post_metabox_nonce'] ) || !wp_verify_nonce( $_POST['shopera_post_metabox_nonce'], basename( __FILE__ ) ) )
+	return $post_id;
+
+	/* Get the post type object. */
+	$post_type = get_post_type_object( $post->post_type );
+
+	/* Check if the current user has permission to edit the post. */
+	if ( !current_user_can( $post_type->cap->edit_post, $post_id ) )
+	return $post_id;
+
+	$meta_values = array(
+		'shopera_external_url'
+		);
+
+	foreach ($meta_values as $a_meta_value) {
+		/* Get the posted data and sanitize it for use as an HTML class. */
+		$new_meta_value   = ( isset( $_POST[$a_meta_value] ) ? sanitize_text_field( $_POST[$a_meta_value] ) : '' );
+
+		/* Get the meta key. */
+		$meta_key   = $a_meta_value;
+
+		/* Get the meta value of the custom field key. */
+		$meta_value   = get_post_meta( $post_id, $meta_key, true );
+
+		/* If a new meta value was added and there was no previous value, add it. */
+		if ( $new_meta_value && '' == $meta_value )
+		add_post_meta( $post_id, $meta_key, $new_meta_value, true );
+
+		/* If the new meta value does not match the old value, update it. */
+		elseif ( $new_meta_value && $new_meta_value != $meta_value )
+		update_post_meta( $post_id, $meta_key, $new_meta_value );
+
+		/* If there is no new meta value but an old value exists, delete it. */
+		elseif ( '' == $new_meta_value && $meta_value )
+		delete_post_meta( $post_id, $meta_key, $meta_value );
+	}
+
+}
+
+function shopera_add_metabox() {
+
+	add_meta_box(
+		'shopera_metabox',                                   // Unique ID
+		esc_html__( 'Featured content advanced fields', 'shopera' ),  // Title
+		'shopera_metabox_function',                          // Callback function
+		'post',                                           // Admin page (or post type)
+		'normal',                                           // Context
+		'high'                                              // Priority
+	);
+}
+
+function shopera_metabox_function( $object, $box ) { ?>
+
+	<?php wp_nonce_field( basename( __FILE__ ), 'shopera_post_metabox_nonce' ); ?>
+
+	<p>
+		<label for="shopera_external_url"><?php _e( "External URL:", 'shopera' ); ?></label>
+		<br />
+		<input class="widefat" type="text" name="shopera_external_url" id="shopera_external_url" value="<?php echo esc_attr( get_post_meta( $object->ID, 'shopera_external_url', true ) ); ?>" size="30" />
+	</p>
+
+<?php }

@@ -25,7 +25,15 @@
 		?>
 		<header class="entry-header">
 			<span class="category-title-top"><?php _e('Brand new collection', 'shopera'); ?></span>
-			<?php the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">','</a></h1>' ); ?>
+			<?php
+				$external_url = get_post_meta(get_the_ID(), 'shopera_external_url', true);
+				if ( !$external_url ) {
+					$post_link = get_permalink();
+				} else {
+					$post_link = $external_url;
+				}
+			?>
+			<?php the_title( '<h1 class="entry-title"><a href="' . esc_url( $post_link ) . '" rel="bookmark">','</a></h1>' ); ?>
 			<div class="clearfix"></div>
 		</header><!-- .entry-header -->
 		<div class="slider-content">

@@ -1,9 +1,19 @@
 Shopera changelog
 
+= Version 1.2.7 =
+* Fixed Flickr widget
+* Fixed woo_featured_categories title style
+* Fixed other styling issues
+
+= Version 1.2.6 =
+* Added Go Premium button at customizer
+* WooCommerce shop breadcrumb image are now customizable
+* Some Safari browser compatibility fixes
+
 = Version 1.2.5 =
 * Added missing language strings
 * Changed add_submenu_page() to add_theme_page()
-* Fixed some styling issues;
+* Fixed some styling issues
 * Fixed cart button
 
 = Version 1.2.4 =

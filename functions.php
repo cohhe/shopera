@@ -1147,7 +1147,7 @@ function shopera_add_metabox() {
 
 	add_meta_box(
 		'shopera_metabox',                                   // Unique ID
-		esc_html__( 'Featured content advanced fields', 'shopera' ),  // Title
+		__('Featured content advanced fields, <a href="http://documentation.cohhe.com/shopera/knowledgebase/featured-content-external-url/" style="font-size: 14px;">documentation</a>', 'shopera'),  // Title
 		'shopera_metabox_function',                          // Callback function
 		'post',                                           // Admin page (or post type)
 		'normal',                                           // Context

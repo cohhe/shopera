@@ -416,7 +416,9 @@ add_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 add_action( 'woocommerce_after_single_product_sidebar', 'shopera_woocommerce_output_related_products', 20 );
 
-remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20 );
+if ( defined('YITH_YWZM_VERSION') ) {
+	remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20 );
+}
 
 /**
  * Enqueue scripts and styles for the front end.
@@ -960,7 +962,7 @@ function shopera_register_required_plugins() {
 			'name'     				=> 'Shopera Functionality', // The plugin name
 			'slug'     				=> 'functionality-for-shopera-theme', // The plugin slug (typically the folder name)
 			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '1.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+			'version' 				=> '1.2', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
 			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
 			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL

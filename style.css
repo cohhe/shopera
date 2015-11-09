@@ -4608,6 +4608,30 @@ body.error404 .search-field {
 		-ms-transform: scale(150)!important;
 		transform: scale(150)!important;
 	}
+
+	#primary-navigation .nav-menu li.menu-item-has-children .sub-menu {
+		top: 0;
+		padding: 0;
+		box-shadow: none;
+		border-left: 1px solid #ddd;
+		border-right: 1px solid #ddd;
+	}
+
+	#primary-navigation .nav-menu li.menu-item-has-children .sub-menu li {
+		float: none;
+	}
+
+	#primary-navigation .nav-menu li.menu-item-has-children .sub-menu li:hover {
+		background-color: #efefef;
+	}
+
+	#primary-navigation .nav-menu li.menu-item-has-children .sub-menu li a:hover {
+		text-decoration: none;
+	}
+
+	#primary-navigation .nav-menu li a {
+		padding: 10px 20px;
+	}
 }
 
 /* Woocommerce forms */

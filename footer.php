@@ -28,7 +28,7 @@
 								echo sanitize_text_field( $copyright );
 							}
 						?> 
-						<?php _e( 'Created by', 'shopera' ); ?> <a href="http://cohhe.com/"><?php _e( 'Cohhe', 'shopera' ); ?></a>. 
+						<?php _e( 'Created by', 'shopera' ); ?> <a href="https://cohhe.com/"><?php _e( 'Cohhe', 'shopera' ); ?></a>. 
 						<?php _e( 'Proudly powered by', 'shopera' ); ?> <a href="<?php echo esc_url( 'http://wordpress.org/' ); ?>"><?php _e( 'WordPress', 'shopera' ); ?></a>
 					</div>
 					<?php 

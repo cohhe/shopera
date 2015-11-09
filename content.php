@@ -99,24 +99,17 @@ global $shopera_article_width;
 	<?php else : ?>
 	<div class="entry-content">
 		<?php
-			if ( is_single() ) {
-				$content = get_the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'shopera' ) );
-			} else {
-				$content = strip_tags( get_the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'shopera' ) ) );
-			}
-			
-
 			$post_grid = get_theme_mod( 'shopera_post_grid', true );
 
-			if( empty( $content ) ) {
+			if( empty( get_the_excerpt() ) ) {
 				$post_content = __( 'No excerpt for this post.', 'shopera' );
 			} elseif ( $post_grid == false || is_single() ) {
-				echo '<p>'.$content.'</p>';
+				the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'shopera' ) );
 			} else {
-				if ( strlen($content) > 140 ) {
-					$post_content = substr($content, 0, 140) . '..';
+				if ( strlen( get_the_excerpt() ) > 140 ) {
+					$post_content = substr(get_the_excerpt(), 0, 140) . '..';
 				} else {
-					$post_content = $content;
+					$post_content = get_the_excerpt();
 				}
 				echo '<p>'.$post_content.'</p>';
 			}

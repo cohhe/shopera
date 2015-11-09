@@ -86,10 +86,27 @@
 			<?php } ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
-	<?php shopera_post_thumbnail(); ?>
+	<?php if ( is_search() ) : ?>
+	<div class="entry-summary">
+		<?php the_excerpt(); ?>
+	</div><!-- .entry-summary -->
+	<?php else : ?>
 	<div class="entry-content">
 		<?php
-			the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'shopera' ) );
+			$post_grid = get_theme_mod( 'shopera_post_grid', true );
+
+			if( empty( get_the_excerpt() ) ) {
+				$post_content = __( 'No excerpt for this post.', 'shopera' );
+			} elseif ( $post_grid == false || is_single() ) {
+				the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'shopera' ) );
+			} else {
+				if ( strlen( get_the_excerpt() ) > 140 ) {
+					$post_content = substr(get_the_excerpt(), 0, 140) . '..';
+				} else {
+					$post_content = get_the_excerpt();
+				}
+				echo '<p>'.$post_content.'</p>';
+			}
 			wp_link_pages( array(
 				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'shopera' ) . '</span>',
 				'after'       => '</div>',
@@ -98,4 +115,5 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
+	<?php endif; ?>
 </article><!-- #post-## -->

@@ -4,7 +4,7 @@ Theme URI: http://cohhe.com/project-view/shopera/
 Author: Cohhe
 Author URI: http://cohhe.com/
 Description: Shopera is FREE, clean, modern, responsive and highly customizable WooCommerce theme. It’s perfect for any kind of web shop. It looks great with all types of devices (laptops, tablets and mobiles). You can get more information about Shopera at http://cohhe.com/project-view/shopera/
-Version: 1.2.9
+Version: 1.3
 License: GNU General Public License v3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
@@ -4760,6 +4760,8 @@ body.single-product.woocommerce .woocommerce-message {
 	-o-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	width: auto;
+	max-width: 100%;
+	max-height: 80px;
 }
 
 /* Widgets */

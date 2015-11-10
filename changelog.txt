@@ -1,5 +1,8 @@
 Shopera changelog
 
+= Version 1.3.1 =
+* Fixed some header responsiveness issues
+
 = Version 1.3 =
 * Fixed shortcode issues on single post pages
 * Fixed calendar/custom menu widget styling issue at footer

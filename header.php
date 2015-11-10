@@ -99,6 +99,7 @@ if ( ( SHOPERA_LAYOUT == 'sidebar-left' && is_active_sidebar( 'sidebar-1' ) ) ||
 							)
 						);
 					?>
+					<div class="mobile header_search"><?php get_search_form(); ?></div>
 				</nav>
 				<?php } ?>
 			</div>

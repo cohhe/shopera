@@ -584,6 +584,8 @@ endif;
  * @return array The filtered body class list.
  */
 function shopera_body_classes( $classes ) {
+	global $wp_version;
+	
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
 	}
@@ -614,6 +616,10 @@ function shopera_body_classes( $classes ) {
 	$slider_status = get_theme_mod('shopera_main_slider', true);
 	if ( $slider_status == false ) {
 		$classes[] = 'slider-off';
+	}
+
+	if ( version_compare($wp_version, '4.4', '>=') ) {
+		$classes[] = 'wp-post-4-4';
 	}
 
 	return $classes;

@@ -59,6 +59,9 @@ function shopera_setup() {
 	*/
 	require_once(get_template_directory() . '/inc/widgets/fast-flickr-widget.php');
 
+	require_once(get_template_directory() . '/inc/admin/welcome-screen/welcome-screen.php');
+	
+
 	/*
 	 * Make Shopera 1.0 available for translation.
 	 *

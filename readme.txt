@@ -1,4 +1,4 @@
-Shopera, Copyright 2015 Cohhe
+Shopera, Copyright 2015 Cohhe https://cohhe.com/
 Shopera is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
@@ -15,6 +15,8 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see http://www.gnu.org/licenses/
 
 Shopera is based on Underscores http://underscores.me/, (coffee) 2012-2014 Automattic, Inc.
+
+Shopera project page https://cohhe.com/project-view/shopera/
 
 Shopera bundles the following third-party resources:
 

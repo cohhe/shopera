@@ -3,6 +3,10 @@ Shopera changelog
 = Version 1.3.3 =
 * Added welcome screen
 
+= Version 1.3.2 =
+* Fixed content issue
+* Fixed WordPress 4.4 compatibility issue
+
 = Version 1.3.1 =
 * Fixed some header responsiveness issues
 

@@ -233,6 +233,26 @@ function shopera_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Demo content settings
+	$wp_customize->add_section( 'shopera_general_demo', array(
+		'priority'       => 61,
+		'capability'     => 'edit_theme_options',
+		'title'          => __( 'Demo content' , 'shopera'),
+		'description'    => __( 'Demo content is going to be shown if this checkbox is checked and the front page is set to "Your latest posts"' , 'shopera'),
+		'panel'          => 'shopera_general_panel'
+	) );
+
+	$wp_customize->add_setting( 'shopera_demo_content', array( 'default' => '1', 'sanitize_callback' => 'shopera_sanitize_checkbox' ) );
+
+	$wp_customize->add_control(
+		'shopera_demo_content',
+		array(
+			'label'      => 'Show demo content',
+			'section'    => 'shopera_general_demo',
+			'type'       => 'checkbox',
+		)
+	);
+
 	// Add Font setting panel and configure settings inside it
 	$wp_customize->add_panel( 'shopera_font_panel', array(
 		'priority'       => 160,

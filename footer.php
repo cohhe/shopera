@@ -15,7 +15,13 @@
 		<div class="site-footer-wrapper">
 			<div class="site-footer-container container">
 				<footer id="colophon" class="site-footer row" role="contentinfo">
-					<?php get_sidebar( 'footer' ); ?>
+					<?php
+						if ( is_null(get_sidebar( 'footer' )) && get_option( 'show_on_front' ) != 'page' ) {
+							get_template_part( 'demo-content/footer' );
+						} else {
+							get_sidebar( 'footer' );
+						}
+					?>
 				</footer><!-- #colophon -->
 				<div class="clearfix"></div>
 			</div>

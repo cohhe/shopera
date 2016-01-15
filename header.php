@@ -81,7 +81,6 @@ if ( ( SHOPERA_LAYOUT == 'sidebar-left' && is_active_sidebar( 'sidebar-1' ) ) ||
 					<div class="cart-contents"></div>
 				<?php } ?>
 				<div class="header_search"><?php get_search_form(); ?></div>
-				<?php if ( has_nav_menu( 'primary' ) ) { ?>
 				<button type="button" class="navbar-toggle visible-xs visible-sm" data-toggle="collapse" data-target=".site-navigation">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -95,13 +94,13 @@ if ( ( SHOPERA_LAYOUT == 'sidebar-left' && is_active_sidebar( 'sidebar-1' ) ) ||
 								'theme_location' => 'primary',
 								'menu_class'     => 'nav-menu',
 								'depth'          => 3,
+								'fallback_cb'    => 'shopera_fallback_page_menu',
 								'walker'         => new Shopera_Header_Menu_Walker
 							)
 						);
 					?>
 					<div class="mobile header_search"><?php get_search_form(); ?></div>
 				</nav>
-				<?php } ?>
 			</div>
 		</div>
 		<div class="clearfix"></div>
@@ -111,6 +110,9 @@ if ( ( SHOPERA_LAYOUT == 'sidebar-left' && is_active_sidebar( 'sidebar-1' ) ) ||
 		if ( is_front_page() && shopera_has_featured_posts() && $slider_state ) {
 			// Include the featured content template.
 			get_template_part( 'featured-content' );
+		} elseif ( get_option( 'show_on_front' ) != 'page' && get_theme_mod('shopera_demo_content', true) ) {
+			// Load demo slider
+			get_template_part( 'demo-content/slider' );
 		}
 	?>
 	<div id="main" class="site-main container">

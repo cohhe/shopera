@@ -196,6 +196,24 @@ function shopera_has_featured_side_posts() {
 	return ! is_paged() && (bool) shopera_get_featured_side_posts();
 }
 
+function shopera_is_static_page() {
+	if ( get_option( 'show_on_front' ) == 'page' ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+function shopera_fallback_page_menu() {    
+
+	echo '<div class="menu-primary-container"><ul id="menu-primary" class="nav-menu">';
+
+		wp_list_pages(array('title_li' => '', 'depth' => 1));
+
+    echo '</ul></div>';
+
+}
+
 /**
  * A helper conditional function that returns a boolean value.
  *

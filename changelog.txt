@@ -1,5 +1,8 @@
 Shopera changelog
 
+= Version 1.3.4 =
+* Added dummy content
+
 = Version 1.3.3 =
 * Added welcome screen
 

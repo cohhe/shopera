@@ -2,6 +2,7 @@ Shopera changelog
 
 = Version 1.3.5 =
 * Fixed breadcrumb width
+* Fixed footer if statement
 
 = Version 1.3.4 =
 * Added dummy content

@@ -84,6 +84,15 @@ jQuery(document).ready(function($) {
 			};
 		});
 
+		if ( jQuery('.woocommerce-breadcrumb').length ) {
+			jQuery('.woocommerce-breadcrumb').css({'left': '-'+jQuery('.woocommerce-breadcrumb').offset().left+'px', 'width': jQuery(window).width()+'px', 'position': 'relative'});
+			
+			jQuery(window).resize(function() {
+				jQuery('.woocommerce-breadcrumb').css({'left': '0px'});
+				jQuery('.woocommerce-breadcrumb').css({'left': '-'+jQuery('.woocommerce-breadcrumb').offset().left+'px', 'width': jQuery(window).width()+'px', 'position': 'relative'});
+			});
+		};
+
 		// Enable menu toggle for small screens.
 		( function() {
 			var nav = $( '#primary-navigation' ), button, menu;

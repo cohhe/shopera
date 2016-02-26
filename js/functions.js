@@ -181,6 +181,9 @@ jQuery(document).ready(function($) {
 	});
 
 	jQuery('.comment-form-author input, .comment-form-email input, .comment-form-url input, .comment-form-comment textarea, .form-row input:not(.select2-focusser), .form-row textarea, .wpcf7-form input[type=email], .wpcf7-form input[type=text], .wpcf7-form textarea, .woocommerce form .form-row select').blur(function() {
+		if ( typeof jQuery(this).attr('name') == 'undefined' ) {
+			return;
+		}
 		if ( jQuery(this).val() == '' ) {
 			jQuery(this).parent().removeClass('input-focused');
 		} else {
@@ -216,6 +219,18 @@ jQuery(document).ready(function($) {
 		}
 	}
 
+	$(document).bind("ajaxComplete", function(event, xhr, settings){
+		if ( settings.data.indexOf('update_order_review') >= 0 ) {
+			jQuery('.comment-form-author input, .comment-form-email input, .comment-form-url input, .comment-form-comment textarea, .form-row input:not(.select2-focusser), .form-row textarea, .wpcf7-form input[type=email], .wpcf7-form input[type=text], .wpcf7-form textarea, .woocommerce form .form-row select').each(function() {
+				if ( jQuery(this).val() == '' ) {
+					jQuery(this).parent().removeClass('input-focused');
+				} else {
+					jQuery(this).parent().addClass('input-focused');
+				}
+			});
+		}
+	});
+
 	jQuery('[for="billing_country"]').hide();
 
 	jQuery('body.home .site-content').isotope();
@@ -227,6 +242,17 @@ jQuery(document).ready(function($) {
 			jQuery('.cart-content-list').stop().fadeIn();
 		}
 		jQuery(this).toggleClass('active');
+	});
+
+	$(document).bind("ajaxComplete", function(event, xhr, settings){
+		if ( settings.data.indexOf('action=add_to_wishlist') >= 0 ) {
+			var response = jQuery.parseJSON(xhr.responseText);
+			if ( response.result == 'true' ) {
+				var curr_element = jQuery(event.target.activeElement);
+				curr_element.find('.add_to_wishlist').removeClass('glyphicon-heart-empty');
+				curr_element.find('.add_to_wishlist').addClass('glyphicon-heart added-to-wishlist');
+			}
+		}
 	});
 });
 

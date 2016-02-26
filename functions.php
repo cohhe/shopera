@@ -210,7 +210,7 @@ function shopera_fallback_page_menu() {
 
 		wp_list_pages(array('title_li' => '', 'depth' => 1));
 
-    echo '</ul></div>';
+	echo '</ul></div>';
 
 }
 
@@ -1195,3 +1195,27 @@ function shopera_metabox_function( $object, $box ) { ?>
 	</p>
 
 <?php }
+
+function shopera_wishlist_icon() {
+	$curr_product = get_product(get_the_ID());
+	$default_wishlists = is_user_logged_in() ? YITH_WCWL()->get_wishlists( array( 'is_default' => true ) ) : false;
+
+	if( ! empty( $default_wishlists ) ){
+		$default_wishlist = $default_wishlists[0]['ID'];
+	}
+	else{
+		$default_wishlist = false;
+	}
+
+	$exists = YITH_WCWL()->is_product_in_wishlist( get_the_ID(), $default_wishlist );
+
+	$exists_class = ' glyphicon-heart-empty';
+	if ( $exists ) {
+		$exists_class = ' added-to-wishlist glyphicon-heart';
+	}
+
+	echo '<span class="glyphicon add_to_wishlist'.$exists_class.'" data-product-id="'.get_the_ID().'" data-product-type="'.$curr_product->product_type.'"></span>';
+}
+if ( defined( 'YITH_WCWL' ) ) {
+	add_action( 'woocommerce_before_shop_loop_item_title', 'shopera_wishlist_icon', 15 );
+}

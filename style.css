@@ -3445,7 +3445,8 @@ body .select2-search {
 	transition: all 0.3s ease-in-out 0s;
 }
 
-.woocommerce .form-row.input-focused:not(.create-account) label:not(.inline) {
+.woocommerce .form-row.input-focused:not(.create-account) label:not(.inline),
+#billing_state_field label {
 	top: -25px;
 	left: 3px;
 }

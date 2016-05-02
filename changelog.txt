@@ -1,5 +1,8 @@
 Shopera changelog
 
+= Version 1.4.0 =
+* Fixed link in customizer
+
 = Version 1.3.9 =
 * Fixed checkout select issue
 * Updated woocommerce templates

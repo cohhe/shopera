@@ -504,20 +504,18 @@ add_filter( 'script_loader_tag', function( $tag, $handle ) {
 	return $tag;
 }, 10, 2 );
 
-if ( ( $GLOBALS['pagenow'] == 'post.php' || $GLOBALS['pagenow'] == 'post-new.php' ) && is_admin() ) {
-	// Admin Javascript
-	function shopera_admin_scripts() {
-		wp_register_script('master', get_template_directory_uri() . '/inc/js/admin-master.js', array('jquery'));
-		wp_enqueue_script('master');
-	}
-	add_action( 'admin_enqueue_scripts', 'shopera_admin_scripts' );
-
-	// Admin CSS
-	function shopera_admin_css() {
-		wp_enqueue_style( 'admin-css', get_template_directory_uri() . '/css/wp-admin.css' );
-	}
-	add_action('admin_head','shopera_admin_css');
+// Admin Javascript
+function shopera_admin_scripts() {
+	wp_register_script('master', get_template_directory_uri() . '/inc/js/admin-master.js', array('jquery'));
+	wp_enqueue_script('master');
 }
+add_action( 'admin_enqueue_scripts', 'shopera_admin_scripts' );
+
+// Admin CSS
+function shopera_admin_css() {
+	wp_enqueue_style( 'admin-css', get_template_directory_uri() . '/css/wp-admin.css' );
+}
+add_action('admin_head','shopera_admin_css');
 
 if ( ! function_exists( 'shopera_the_attached_image' ) ) :
 /**
@@ -1219,3 +1217,41 @@ function shopera_wishlist_icon() {
 if ( defined( 'YITH_WCWL' ) ) {
 	add_action( 'woocommerce_before_shop_loop_item_title', 'shopera_wishlist_icon', 15 );
 }
+
+function shopera_admin_rating_notice() {
+	$user = wp_get_current_user();
+	?>
+	<div class="shopera-rating-notice">
+		<span class="shopera-notice-left">
+			<img src="<?php echo get_template_directory_uri(); ?>/images/logo-square.png" alt="">
+		</span>
+		<div class="shopera-notice-center">
+			<p>Hi there, <?php echo $user->data->display_name; ?>, we noticed that you've been using Shopera for a while now.</p>
+			<p>We spent many hours developing this free theme for you and we would appriciate if you supported us by rating it!</p>
+		</div>
+		<div class="shopera-notice-right">
+			<a href="https://wordpress.org/support/view/theme-reviews/shopera?rate=5#postform" class="button button-primary button-large shopera-rating-rate">Rate at WordPress</a>
+			<a href="javascript:void(0)" class="button button-large preview shopera-rating-dismiss">No, thanks</a>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<?php
+}
+if ( get_option('shopera_rating_notice') && get_option('shopera_rating_notice') != 'hide' && time() - get_option('shopera_rating_notice') > 432000 ) {
+	add_action( 'admin_notices', 'shopera_admin_rating_notice' );
+}
+
+function shopera_dismiss_rating_notice() {
+	update_option('shopera_rating_notice', 'hide');
+
+	die(0);
+}
+add_action( 'wp_ajax_nopriv_shopera_dismiss_notice', 'shopera_dismiss_rating_notice' );
+add_action( 'wp_ajax_shopera_dismiss_notice', 'shopera_dismiss_rating_notice' );
+
+function shopera_theme_activated() {
+	if ( !get_option('shopera_rating_notice') ) {
+		update_option('shopera_rating_notice', time());
+	}
+}
+add_action('after_switch_theme', 'shopera_theme_activated');

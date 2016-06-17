@@ -1,5 +1,8 @@
 Shopera changelog
 
+= Version 1.4.1 =
+* WooCommerce 2.6.1 support
+
 = Version 1.4.0 =
 * Fixed link in customizer
 

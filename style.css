@@ -2236,7 +2236,8 @@ body .container ul.products li.product .product-info {
 #tbtestimonial-listing div.in-content-testimonial .testimonial-gravatar img {
 	width: 100%;
 	height: auto;
-	position: relative;
+	position: absolute;
+	top: 50%;
 
 	transform: translateY(-50%);
 	-ms-transform: translateY(-50%);

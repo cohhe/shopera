@@ -503,7 +503,7 @@ function shopera_script_loader( $tag, $handle ) {
 	}
 	return $tag;
 }
-add_filter( 'script_loader_tag', 10, 2 );
+add_filter( 'script_loader_tag', 'shopera_script_loader', 10, 2 );
 
 // Admin Javascript
 function shopera_admin_scripts() {

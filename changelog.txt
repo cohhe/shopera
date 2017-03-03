@@ -1,5 +1,8 @@
 Shopera changelog
 
+= Version 1.4.2 =
+* Fixed customizer demo content option issue
+
 = Version 1.4.1 =
 * WooCommerce 2.6.1 support
 

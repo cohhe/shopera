@@ -497,12 +497,13 @@ function shopera_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'shopera_scripts' );
 
-add_filter( 'script_loader_tag', function( $tag, $handle ) {
+function shopera_script_loader( $tag, $handle ) {
 	if ( $handle === 'html5shiv' ) {
 		$tag = "<!--[if lt IE 9]>$tag<![endif]-->";
 	}
 	return $tag;
-}, 10, 2 );
+}
+add_filter( 'script_loader_tag', 'shopera_script_loader', 10, 2 );
 
 // Admin Javascript
 function shopera_admin_scripts() {

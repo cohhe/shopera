@@ -110,7 +110,7 @@ if ( ( SHOPERA_LAYOUT == 'sidebar-left' && is_active_sidebar( 'sidebar-1' ) ) ||
 		if ( is_front_page() && shopera_has_featured_posts() && $slider_state ) {
 			// Include the featured content template.
 			get_template_part( 'featured-content' );
-		} elseif ( get_option( 'show_on_front' ) != 'page' && get_theme_mod('shopera_demo_content', true) ) {
+		} elseif ( get_option( 'show_on_front' ) != 'page' && get_theme_mod('shopera_demo_content', true) && is_front_page() ) {
 			// Load demo slider
 			get_template_part( 'demo-content/slider' );
 		}

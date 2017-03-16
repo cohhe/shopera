@@ -219,8 +219,8 @@ jQuery(document).ready(function($) {
 		}
 	}
 
-	$(document).bind("ajaxComplete", function(event, xhr, settings){
-		if ( settings.data.indexOf('update_order_review') >= 0 ) {
+	jQuery(document).bind("ajaxComplete", function(event, xhr, settings) {
+		if ( typeof settings.data != 'undefined' && settings.data.indexOf('update_order_review') >= 0 ) {
 			jQuery('.comment-form-author input, .comment-form-email input, .comment-form-url input, .comment-form-comment textarea, .form-row input:not(.select2-focusser), .form-row textarea, .wpcf7-form input[type=email], .wpcf7-form input[type=text], .wpcf7-form textarea, .woocommerce form .form-row select').each(function() {
 				if ( jQuery(this).val() == '' ) {
 					jQuery(this).parent().removeClass('input-focused');
@@ -244,8 +244,8 @@ jQuery(document).ready(function($) {
 		jQuery(this).toggleClass('active');
 	});
 
-	$(document).bind("ajaxComplete", function(event, xhr, settings){
-		if ( settings.data.indexOf('action=add_to_wishlist') >= 0 ) {
+	jQuery(document).bind("ajaxComplete", function(event, xhr, settings){
+		if ( typeof settings.data != 'undefined' && settings.data.indexOf('action=add_to_wishlist') >= 0 ) {
 			var response = jQuery.parseJSON(xhr.responseText);
 			if ( response.result == 'true' ) {
 				var curr_element = jQuery(event.target.activeElement);

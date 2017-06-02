@@ -988,7 +988,7 @@ function shopera_register_required_plugins() {
 			'name'     				=> 'Shopera Functionality', // The plugin name
 			'slug'     				=> 'functionality-for-shopera-theme', // The plugin slug (typically the folder name)
 			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '1.4', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+			'version' 				=> '1.5', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
 			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
 			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
@@ -997,7 +997,7 @@ function shopera_register_required_plugins() {
 			'name'     				=> 'Tiled Galleries Carousel Without Jetpack', // The plugin name
 			'slug'     				=> 'tiled-gallery-carousel-without-jetpack', // The plugin slug (typically the folder name)
 			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '2.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+			'version' 				=> '2.2', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
 			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
 			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
@@ -1007,7 +1007,7 @@ function shopera_register_required_plugins() {
 			'slug'     				=> 'woocommerce', // The plugin slug (typically the folder name)
 			'source'   				=> 'http://downloads.wordpress.org/plugin/woocommerce.zip', // The plugin source
 			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '2.6.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+			'version' 				=> '3.0.7', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
 			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
 			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
@@ -1016,7 +1016,7 @@ function shopera_register_required_plugins() {
 			'name'     				=> 'Bootstrap Shortcodes for WordPress', // The plugin name
 			'slug'     				=> 'bootstrap-3-shortcodes', // The plugin slug (typically the folder name)
 			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '3.3.6', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+			'version' 				=> '3.3.10', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
 			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
 			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
@@ -1025,7 +1025,7 @@ function shopera_register_required_plugins() {
 			'name'     				=> 'Contact Form 7', // The plugin name
 			'slug'     				=> 'contact-form-7', // The plugin slug (typically the folder name)
 			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '4.2.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+			'version' 				=> '4.8', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
 			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
 			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
@@ -1034,7 +1034,7 @@ function shopera_register_required_plugins() {
 			'name'     				=> 'Newsletter', // The plugin name
 			'slug'     				=> 'newsletter', // The plugin slug (typically the folder name)
 			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '3.8.5', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+			'version' 				=> '4.9.7', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
 			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
 			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
@@ -1043,7 +1043,7 @@ function shopera_register_required_plugins() {
 			'name'     				=> 'Simple Share Buttons Adder', // The plugin name
 			'slug'     				=> 'simple-share-buttons-adder', // The plugin slug (typically the folder name)
 			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '6.0.2', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+			'version' 				=> '6.3.5', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
 			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
 			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
@@ -1052,7 +1052,7 @@ function shopera_register_required_plugins() {
 			'name'     				=> 'Easy Testimonials', // The plugin name
 			'slug'     				=> 'easy-testimonials', // The plugin slug (typically the folder name)
 			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '1.31.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+			'version' 				=> '2.3.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
 			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
 			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
@@ -1061,7 +1061,7 @@ function shopera_register_required_plugins() {
 			'name'     				=> 'YITH WooCommerce Wishlist', // The plugin name
 			'slug'     				=> 'yith-woocommerce-wishlist', // The plugin slug (typically the folder name)
 			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '2.0.9', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+			'version' 				=> '2.1.2', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
 			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
 			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
@@ -1070,7 +1070,7 @@ function shopera_register_required_plugins() {
 			'name'     				=> 'YITH WooCommerce Zoom Magnifier', // The plugin name
 			'slug'     				=> 'yith-woocommerce-zoom-magnifier', // The plugin slug (typically the folder name)
 			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '1.2.5', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+			'version' 				=> '1.2.29', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
 			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
 			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
@@ -1196,7 +1196,12 @@ function shopera_metabox_function( $object, $box ) { ?>
 <?php }
 
 function shopera_wishlist_icon() {
-	$curr_product = get_product(get_the_ID());
+	if ( function_exists('wc_get_product') ) {
+		$curr_product = wc_get_product(get_the_ID());
+	} else {
+		$curr_product = get_product(get_the_ID());
+	}
+	
 	$default_wishlists = is_user_logged_in() ? YITH_WCWL()->get_wishlists( array( 'is_default' => true ) ) : false;
 
 	if( ! empty( $default_wishlists ) ){
@@ -1213,7 +1218,13 @@ function shopera_wishlist_icon() {
 		$exists_class = ' added-to-wishlist glyphicon-heart';
 	}
 
-	echo '<span class="glyphicon add_to_wishlist'.$exists_class.'" data-product-id="'.get_the_ID().'" data-product-type="'.$curr_product->product_type.'"></span>';
+	if ( function_exists('wc_get_product') ) {
+		$product_type = $curr_product->get_type();
+	} else {
+		$product_type = $curr_product->product_type;
+	}
+
+	echo '<span class="glyphicon add_to_wishlist'.$exists_class.'" data-product-id="'.get_the_ID().'" data-product-type="'.$product_type.'"></span>';
 }
 if ( defined( 'YITH_WCWL' ) ) {
 	add_action( 'woocommerce_before_shop_loop_item_title', 'shopera_wishlist_icon', 15 );

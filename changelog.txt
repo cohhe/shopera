@@ -1,5 +1,9 @@
 Shopera changelog
 
+= Version 1.4.3 =
+* WooCommerce 3.0 support
+* Checked WordPress 4.8 compatibility
+
 = Version 1.4.2 =
 * Fixed customizer demo content option issue
 
